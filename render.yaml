@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: surprise-bae-florist-online-system
+    runtime: docker
+    repo: https://github.com/JannahKZ/surprisebae
+    plan: free
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_KEY
+        generateValue: true
+      - key: APP_DEBUG
+        value: false
+      - key: DB_CONNECTION
+        value: mysql
+      # add more .env values here
