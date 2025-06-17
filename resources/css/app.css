@@ -1,0 +1,221 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('cat.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+/* Header Styles */
+h1 {
+    font-size: 2.5rem; 
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Form Styles */
+form {
+    text-align: center;
+}
+
+input[type="text"], input[type="password"], select {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+button, a.button {
+    padding: 5px 10px;
+    background-color: #28a745;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.9rem;
+}
+
+/* Update Button - Green */
+a.button-update {
+    background-color: #28a745;
+    margin-right: 5px;
+}
+
+a.button-update:hover {
+    background-color: #218838;
+}
+
+/* Delete Button - Red */
+a.button-delete {
+    background-color: #dc3545;
+}
+
+a.button-delete:hover {
+    background-color: #c82333;
+}
+
+/* Back Button - Red */
+a.button-back {
+    background-color: #dc3545;
+}
+
+a.button-back:hover {
+    background-color: #c82333;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #444;
+    color: #fff;
+}
+
+td .button-container {
+    display: flex;
+    gap: 5px; 
+    justify-content: start; 
+}
+
+/* Error Messages */
+.error {
+    color: #ff6b6b;
+    text-align: center;
+}
+
+.sidebar {
+    background-color: #2b3e50; /* Dark blue color */
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 100px;
+    border-radius: 50%; /* Optional: Circular logo */
+}
+
+.sidebar h1 {
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+}
+
+.nav li {
+    margin: 15px 0;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav a:hover {
+    background-color: #415a77; /* Lighter blue */
+}
+
+.button-container {
+    display: flex;
+    gap: 15px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+}
+
+/* Add Button */
+.btn-add {
+    background-color: #e84548#28a745;
+    color: white;
+}
+
+.btn-add:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Edit Button */
+.btn-edit {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Delete Button */
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
