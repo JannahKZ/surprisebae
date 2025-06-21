@@ -105,7 +105,6 @@ class DecoServiceController extends Controller
     // Update service
     public function update(Request $request, $id)
     {
-        dd($request->method());
 
         $datesArray = [];
         if ($request->has('date')) {
@@ -133,7 +132,7 @@ class DecoServiceController extends Controller
             }
 
             $imagePath = $request->file('image')->store('deco_images', 'public');
-            $decoService->image = $imagePath;
+            $decoService->image_url = $imagePath;
         }
 
         $decoService->update([
