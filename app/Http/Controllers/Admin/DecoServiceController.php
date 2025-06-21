@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\DecoService;
 use App\Models\Category;
 use App\Models\Booking;
+use Illuminate\Support\Facades\Storage;
+
 
 class DecoServiceController extends Controller
 {
@@ -103,6 +105,8 @@ class DecoServiceController extends Controller
     // Update service
     public function update(Request $request, $id)
     {
+        dd($request->method());
+
         $datesArray = [];
         if ($request->has('date')) {
             $datesArray = array_filter(array_map('trim', explode(',', $request->input('date'))));
@@ -121,7 +125,13 @@ class DecoServiceController extends Controller
 
         $decoService = DecoService::findOrFail($id);
 
+        
+
         if ($request->hasFile('image')) {
+            if ($decoService->image && Storage::disk('public')->exists($decoService->image)) {
+                Storage::disk('public')->delete($decoService->image);
+            }
+
             $imagePath = $request->file('image')->store('deco_images', 'public');
             $decoService->image = $imagePath;
         }

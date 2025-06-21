@@ -202,11 +202,9 @@
                         <tr>
                             <td>
                                 @if ($product->image_path)
-                                    <img
-                                        src="{{ asset('http://10.0.2.2:8000/storage/product_images/' . $product->image_path) }}"
+                                    <img src="{{ asset('storage/product_images/' . $product->image_path) }}"
                                         alt="{{ $product->name }}"
-                                        class="product-image"
-                                    >
+                                        class="product-image">
                                 @else
                                     <span class="text-sm text-gray-500 italic">No image</span>
                                 @endif

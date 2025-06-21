@@ -36,10 +36,11 @@ Route::prefix('decoServices')->name('decoServices.')->group(function () {
     Route::get('/categories', [DecoServiceController::class, 'serviceByCategory'])->name('categories');
     Route::get('/category/{category}', [DecoServiceController::class, 'index'])->name('index');
     Route::get('/category/{category}/create', [DecoServiceController::class, 'create'])->name('create');
-    Route::post('/category/{category?}', [DecoServiceController::class, 'store'])->name('store');
+    Route::post('/}', [DecoServiceController::class, 'store'])->name('store');
     Route::get('{id}/edit', [DecoServiceController::class, 'edit'])->name('edit');
     Route::put('{id}', [DecoServiceController::class, 'update'])->name('update');
     Route::delete('{id}', [DecoServiceController::class, 'destroy'])->name('delete');
+    Route::delete('/category/{id}/delete', [DecoServiceController::class, 'deleteCategory'])->name('category.delete');
 });
 
 // Deliveries

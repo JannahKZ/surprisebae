@@ -9,7 +9,7 @@ class DecoService extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['id', 'name', 'description', 'price', 'image_url', 'category_id', 'date'];
+    protected $fillable = ['name', 'description', 'price', 'image', 'category_id'];
 
     public function dates()
     {
